@@ -1,0 +1,122 @@
+
+/*Let's import our font and do more^^*/
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+
+html {
+    font-family: 'cabin', sans-serif;
+    line-height: 1.5;
+
+    min-height: 100vh;
+    background-color: #202f3d;
+}
+
+/* All our css stuff! */
+
+body {
+    width: calc(100% - 40px);
+    margin: auto;
+}
+
+.maindiv {
+    position: absolute;
+
+    background-color: #2d4057;
+    min-height: 20px;
+
+    width: 100%;
+
+    left: 0;
+}
+
+.mt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    color: #ffffff;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.mt:hover {
+    color: #ccc6ff;
+
+    transition: color 0.5s ease-in-out;
+}
+
+.container {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    top: 50px;
+}
+
+.artist {
+    position: relative;
+
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+.foot {
+    position: absolute;
+
+    background-color: #2d4057;
+    min-height: 120px;
+    min-width: auto;
+
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.next {
+    position: absolute;
+    margin: auto;
+
+    right: 2.5%;
+    bottom: 15.5%;
+
+    color: white;
+    font-size: 24px;
+    background-color: #2d4057;
+    border: none;
+
+    min-height: 64px;
+    min-width: 64px;
+    border-radius: 999px;
+
+    cursor: pointer;
+}
+
+.next:hover {
+    background-color: white;
+    color: black;
+
+    transition: background-color 0.5s ease-in-out, color 0.35s ease-in-out;
+}
+
+.mwl {
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+
+    position: relative;
+    top: 20px;
+
+    text-align: center;
+}
+
+a {
+    color: pink;
+}
+
+a:visited {
+    color: pink;
+}

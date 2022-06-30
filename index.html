@@ -1,0 +1,52 @@
+<!-- This is the most important content of this .html file. -->
+<!-- It houses the Femboy Roulette title, favicon and css design. -->
+<!DOCTYPE html>
+<title>Femboy Roulette</title> <!-- Sets the current webpage title -->
+<link rel="stylesheet" href="./common/css/ossonoba.css"> <!-- Imports the css file -->
+<link rel="x/icon" href="./common/img/favicon.ico"> <!-- Imports the favicon and sets it as our page icon-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+</body>
+
+<div class="maindiv">
+    <div class="mt">
+        Femboy Roulette
+    </div>
+</div>
+
+<div class="container"></div>
+<div class="artist"></div>~
+
+<button class="button next" onclick="location.href=''">🗘</button>
+
+<div class="foot">
+    <div class="mwl">
+        Made with ❤️ by <a href="https://github.com/FemZoey">Zoey</a>
+    </div>
+</div>
+
+<script>
+    const xhr = new XMLHttpRequest();
+    const container = document.getElementsByClassName("container")[0];
+    var img = document.createElement("img");
+    var artist = document.getElementsByClassName("artist")[0];
+    img.style.maxWidth = "450px";
+    xhr.open("GET", "https://api.femboyroulette.xyz/");
+    xhr.send();
+    xhr.onreadystatechange = (e) => {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var i = JSON.parse(xhr.responseText);
+            img.src = i["image"];
+            if(img.src == "https://wallpapercave.com/wp/wp6570192.jpg") {
+                location.reload();  
+            }
+            artist.innerHTML = i["artist"];
+        }
+    }
+    container.appendChild(img);
+    container.appendChild(artist);
+</script>
